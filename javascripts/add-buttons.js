@@ -1,17 +1,9 @@
-api.registerConnectorClass('search-banner-below-input', 'add-buttons', {
-  setupComponent(args, component) {
-    let bannerLinks = settings.banner_links;
-    component.setProperties({ bannerLinks });
-  }
-});
-
-api.decorateWidget('search-banner-below-input:add-buttons', {
+api.createWidget('search-banner-buttons', {
   tagName: 'div.search-banner-buttons',
 
-  html(attrs, state) {
+  html() {
+    let bannerLinks = settings.banner_links;
     let buttons = [];
-
-    let bannerLinks = this.register.lookup('settings:main').banner_links;
 
     bannerLinks.forEach(link => {
       let icon = link.icon;
@@ -33,4 +25,8 @@ api.decorateWidget('search-banner-below-input:add-buttons', {
 
     return buttons;
   }
+});
+
+api.registerConnectorClass('search-banner-below-input', 'add-buttons', {
+  widgetClass: 'search-banner-buttons'
 });
