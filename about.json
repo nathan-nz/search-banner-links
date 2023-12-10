@@ -1,5 +1,8 @@
 {
-   "name" : "Search Banner Links",
-   "about_url" : "",
-   "license_url": ""
+  "about_url": null,
+  "license_url": null,
+  "assets": {
+  },
+  "name": "Search Banner Links",
+  "component": true
 }
