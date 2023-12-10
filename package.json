@@ -1,9 +1,0 @@
-{
-  "name": "search-banner-links",
-  "repository": "https://github.com/nathan-nz/search-banner-links",
-  "author": "nathan-nz",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint-config-discourse": "latest"
-  }
-}
